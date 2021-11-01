@@ -67,9 +67,9 @@ class EmployeeController extends Controller
             $data->phone = $request->phone;
             //$data->profile_photo = $request->profile_photo->move(public_path('public/application/storage/'),$profileName);
             //$data->profile_photo = $request->file('profile_photo')->move('storage/application/public');
-            $old_file = $data->profile_photo;
-            $new_file = $request->profile_photo;
-            $data->profile_photo = $request->file('profile_photo')->move($old_file, $new_file);
+            //$old_file = $data->profile_photo;
+            //$new_file = $request->profile_photo;
+            //$data->profile_photo = $request->file('profile_photo')->move($old_file, $new_file);
             $data->save();
             return redirect('/employee');
     }
